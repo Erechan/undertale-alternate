@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://klbsqrg4h20i"]
+
+[ext_resource type="Script" uid="uid://bbmks3fl75iip" path="res://scripts/text_typer.gd" id="1_8mft6"]
+[ext_resource type="FontFile" uid="uid://b748cmjolemm0" path="res://assets/fonts/方正像素12.ttf" id="1_873ts"]
+[ext_resource type="AudioStream" uid="uid://umayyynwc2a4" path="res://sounds/SND_TXT2.wav" id="3_547au"]
+
+[node name="TextTyper" type="RichTextLabel"]
+offset_right = 429.0
+offset_bottom = 223.0
+theme_override_fonts/normal_font = ExtResource("1_873ts")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+scroll_active = false
+script = ExtResource("1_8mft6")
+typer_text = "Hello, undertale.你真是个[color=red]老6! 再见了， 我的伙伴们！"
+type_sound = ExtResource("3_547au")

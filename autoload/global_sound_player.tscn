@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl1t14yvtea25"]
+
+[ext_resource type="Script" uid="uid://buxa3q4aihjyx" path="res://scripts/global_sound_player.gd" id="1_r2kmx"]
+
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_eskrl"]
+
+[node name="GlobalSoundPlayer" type="AudioStreamPlayer"]
+stream = SubResource("AudioStreamPolyphonic_eskrl")
+script = ExtResource("1_r2kmx")
