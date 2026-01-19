@@ -20,6 +20,9 @@ config/icon="res://icon.svg"
 SceneManager="*res://autoload/scene_manager.tscn"
 GlobalSoundPlayer="*res://autoload/global_sound_player.tscn"
 OverworldDialogManager="*res://autoload/overworld_dialog_manager.tscn"
+GameData="*res://autoload/game_data.gd"
+ItemDB="*res://autoload/item_db.gd"
+OverworldUiManager="*res://autoload/overworld_ui_manager.tscn"
 
 [display]
 

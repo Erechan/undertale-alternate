@@ -1,0 +1,227 @@
+[gd_scene load_steps=12 format=3 uid="uid://da2818j0tkha7"]
+
+[ext_resource type="Texture2D" uid="uid://uhr28f58notf" path="res://textures/UI/MenuItem.jpg" id="1_mo8xh"]
+[ext_resource type="FontFile" uid="uid://b748cmjolemm0" path="res://assets/fonts/方正像素12.ttf" id="2_iv23g"]
+[ext_resource type="FontFile" uid="uid://cg0fvv4hlmwbw" path="res://assets/fonts/CryptOfTomorrow.ttf" id="3_0dmc6"]
+[ext_resource type="Texture2D" uid="uid://c65njx14q3m32" path="res://textures/soul/spr_heartsmall_0.png" id="3_mv8w0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mv8w0"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ij8oc"]
+font = ExtResource("2_iv23g")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_p2x5p"]
+font = ExtResource("3_0dmc6")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dmc6"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mv8w0"]
+font = ExtResource("2_iv23g")
+font_size = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iv23g"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0dmc6"]
+font = ExtResource("2_iv23g")
+font_size = 24
+
+[node name="OverworldUIManager" type="CanvasLayer"]
+
+[node name="MenuUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MenuUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mo8xh")
+
+[node name="InfoPanel" type="Panel" parent="MenuUI"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -288.0
+offset_top = 52.0
+offset_right = -146.0
+offset_bottom = -318.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mv8w0")
+
+[node name="NameLabel" type="Label" parent="MenuUI/InfoPanel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 76.0
+offset_bottom = 37.0
+text = "YXYM"
+label_settings = SubResource("LabelSettings_ij8oc")
+
+[node name="LVLabel" type="Label" parent="MenuUI/InfoPanel"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 48.0
+offset_right = 78.0
+offset_bottom = 73.0
+text = "LV  1"
+label_settings = SubResource("LabelSettings_p2x5p")
+
+[node name="HPLabel" type="Label" parent="MenuUI/InfoPanel"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 66.0
+offset_right = 78.0
+offset_bottom = 91.0
+text = "HP  20/20"
+label_settings = SubResource("LabelSettings_p2x5p")
+
+[node name="GoldLabel" type="Label" parent="MenuUI/InfoPanel"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 84.0
+offset_right = 78.0
+offset_bottom = 109.0
+text = "G   0"
+label_settings = SubResource("LabelSettings_p2x5p")
+
+[node name="SelectPanel" type="Panel" parent="MenuUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 168.0
+offset_right = -466.0
+offset_bottom = -164.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0dmc6")
+
+[node name="PlayerSoul" type="Sprite2D" parent="MenuUI/SelectPanel"]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(32, 37)
+scale = Vector2(1.9027766, 1.9027766)
+texture = ExtResource("3_mv8w0")
+
+[node name="ItemLabel" type="Label" parent="MenuUI/SelectPanel"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 24.0
+offset_right = 114.0
+offset_bottom = 49.0
+text = "ITEM"
+label_settings = SubResource("LabelSettings_mv8w0")
+
+[node name="StatusLabel" type="Label" parent="MenuUI/SelectPanel"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 60.0
+offset_right = 114.0
+offset_bottom = 85.0
+text = "STAT"
+label_settings = SubResource("LabelSettings_mv8w0")
+
+[node name="CellphoneLabel" type="Label" parent="MenuUI/SelectPanel"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 96.0
+offset_right = 114.0
+offset_bottom = 121.0
+text = "CELL"
+label_settings = SubResource("LabelSettings_mv8w0")
+
+[node name="ItemPanel" type="Panel" parent="MenuUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 188.0
+offset_top = 52.0
+offset_right = -106.0
+offset_bottom = -66.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_iv23g")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUI/ItemPanel"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 32.0
+offset_right = 317.0
+offset_bottom = 310.0
+theme_override_constants/separation = 7
+
+[node name="ItemLabel0" type="Label" parent="MenuUI/ItemPanel/VBoxContainer"]
+layout_mode = 2
+text = "Monster Candy"
+label_settings = SubResource("LabelSettings_0dmc6")
+
+[node name="ItemLabel1" type="Label" parent="MenuUI/ItemPanel/VBoxContainer"]
+layout_mode = 2
+text = "Monster Candy"
+label_settings = SubResource("LabelSettings_0dmc6")
+
+[node name="ItemLabel2" type="Label" parent="MenuUI/ItemPanel/VBoxContainer"]
+layout_mode = 2
+text = "Monster Candy"
+label_settings = SubResource("LabelSettings_0dmc6")
+
+[node name="ItemLabel3" type="Label" parent="MenuUI/ItemPanel/VBoxContainer"]
+layout_mode = 2
+text = "Monster Candy"
+label_settings = SubResource("LabelSettings_0dmc6")
+
+[node name="ItemLabel4" type="Label" parent="MenuUI/ItemPanel/VBoxContainer"]
+layout_mode = 2
+text = "Monster Candy"
+label_settings = SubResource("LabelSettings_0dmc6")
+
+[node name="ItemLabel5" type="Label" parent="MenuUI/ItemPanel/VBoxContainer"]
+layout_mode = 2
+text = "Monster Candy"
+label_settings = SubResource("LabelSettings_0dmc6")
+
+[node name="ItemLabel6" type="Label" parent="MenuUI/ItemPanel/VBoxContainer"]
+layout_mode = 2
+text = "Monster Candy"
+label_settings = SubResource("LabelSettings_0dmc6")
+
+[node name="ItemLabel7" type="Label" parent="MenuUI/ItemPanel/VBoxContainer"]
+layout_mode = 2
+text = "Monster Candy"
+label_settings = SubResource("LabelSettings_0dmc6")
+
+[node name="PlayerSoul" type="Sprite2D" parent="MenuUI/ItemPanel"]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(28.999985, 44.999992)
+scale = Vector2(1.9027766, 1.9027766)
+texture = ExtResource("3_mv8w0")

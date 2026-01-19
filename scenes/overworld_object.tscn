@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://bfkic7exx0wpp" path="res://textures/sign.png" id="1_mysep"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8uyy2"]
-size = Vector2(20, 7)
+size = Vector2(20, 13)
 
 [node name="OverworldObject" type="StaticBody2D"]
 script = ExtResource("1_8uyy2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -3.5)
+position = Vector2(0, -6.5)
 shape = SubResource("RectangleShape2D_8uyy2")
 
 [node name="Sign" type="Sprite2D" parent="."]
